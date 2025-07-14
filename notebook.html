@@ -73,6 +73,14 @@
 
   <script src="notebook-data.js"></script>
   <script>
+
+      var more = '<div style="height: 1000px; background: #EEE;"></div>';
+
+      var wrapper = document.getElementById("wrapper");
+      var content = document.getElementById("content");
+      var test = document.getElementById("test");
+      content.innerHTML = more;
+      
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -106,7 +114,19 @@
         }
       };
 
+    function scroller() {
+      // print relevant scroll info
+      test.innerHTML = wrapper.scrollTop+"+"+wrapper.offsetHeight+"+100>"+content.offsetHeight;
+  
+      // add more contents if user scrolled down enough
+      if(wrapper.scrollTop+wrapper.offsetHeight+100>content.offsetHeight) {
+        content.innerHTML+= more;
+    }
+  }
+
       /* window.addEventListener('scroll', scrollCheck); */
+      // hook the scroll handler to scroll event
+      window.addEventListener(wrapper,"scroll",scroller);
     }
 
     const entries = window.NOTES || []; // from notebook-data.js
