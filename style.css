@@ -81,4 +81,6 @@ header a {
 .modal-content p {
   margin-top: 10px;
   font-size: 16px;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
 }
