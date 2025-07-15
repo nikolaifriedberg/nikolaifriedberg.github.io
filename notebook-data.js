@@ -29,9 +29,7 @@ window.NOTES = [
   },
   {
   date: "CONTACT INFORMATION",
-  text: `You can email me at: nikolaifriedberg@gmail.com
-
-  Or find me on Instagram: @nimjolai`
+  text: "You can email me at: nikolaifriedberg@gmail.com\n\nOr find me on Instagram: @nimjolai"
   },
 ];
       
