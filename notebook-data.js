@@ -17,7 +17,7 @@ window.NOTES = [
   },
   {
     date: "August 1st",
-    text: "Did laundry. Found two hiding children in the blankets. They were gleeful."
+    text: "Did laundry. Found two hiding children in the blankets."
   },
   {
     date: "July 15th",
