@@ -9,7 +9,7 @@ window.NOTES = [
   },
   {
     date: "December 25",
-    text: "It was the liquid. That's what finally did it. I'd been giving her gifts for a while, things I'd bought, things I'd found, and now things I'd made. She seemed to like it when I gave her gifts, though mostly because she liked me, I think. But she didn't ilke the liquid."
+    text: "It was the deck of cards. That's what finally did it. I'd been giving her gifts for a while, things I'd bought, things I'd found, and now things I'd made. She seemed to like it when I gave her gifts, though mostly because she liked me, I think. But she didn't like my cards."
   },
   {
     date: "September 11",
@@ -21,7 +21,16 @@ window.NOTES = [
   },
   {
     date: "July 15th",
-    text: "Turn this crazy horse around. Grab the damn thing by the ears. Dig your heels in. Lift up your chin to the sky and breath deep as you rock to and fro and the dust seeps into your soul."
+    text: "Turn that crazy horse around. Grab the damn thing by the ears. Dig your heels in. Lift up your chin to the sky and breath deep as you rock to and fro and the dust seeps into your soul."
+  },
+  {
+    date: "Day of Lost Causes",
+    text: "A string of recent events has led us to believe that causation has been misplaced. One of the higher ups put it down and couldn't remember where, and once that happened, despite multiple search parties and wanted posters, it all went bottom up."
+  },
+  {
+    date: "CONTACT INFORMATION",
+    text: "You can email me at: nikolaifriedberg@gmail.com \n\n
+    Or find me on Instagram: @nimjolai"
   },
 ];
       
