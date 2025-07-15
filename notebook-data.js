@@ -14,6 +14,13 @@ window.NOTES = [
   {
     date: "September 11",
     text: "BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM"
-  }
+  },
+  {
+    date: "August 1st",
+    text: "Did laundry. Found two hiding children in the blankets. They were gleeful."
+  },
+  {
+    date: "July 15th",
+    text: "Turn this crazy horse around. Grab the damn thing by the ears. Dig your heels in. Lift up your chin to the sky and breath deep as you rock to and fro and the dust seeps into your soul."
 ];
       
