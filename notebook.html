@@ -117,10 +117,11 @@
     for (let i = 0; i < 10; i++) {
       refillPool();
       loadMoreEntries();
-      if (i == 5): {
+      if (i == 5) {
         const div = document.createElement("div");
         div.className = "entry";
         div.innerHTML = `<h2>${"CONTACT INFORMATION"}</h2><p>${"You can email me at: nikolaifriedberg@gmail.com\n\nOr find me on Instagram: @nimjolai"}</p>`;
+        content.appendChild(div);
       }
     }
   </script>
