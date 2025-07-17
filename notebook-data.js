@@ -27,9 +27,5 @@ window.NOTES = [
     date: "Day of Lost Causes",
     text: "A string of recent events has led us to believe that causation has been misplaced. One of the higher ups put it down and couldn't remember where, and once that happened, despite multiple search parties and wanted posters, it all went bottom up."
   },
-  {
-    date: "CONTACT INFORMATION",
-    text: "You can email me at: nikolaifriedberg@gmail.com\n\nOr find me on Instagram: @nimjolai"
-  },
 ];
       
