@@ -6,32 +6,24 @@
   <title>Notebook</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: sans-serif;
       background: white;
-      display: flex;
-      flex-direction: column;
     }
-    
+
     header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px;
-      background: white;
+      position: absolute;
+      top: 20px;
+      left: 20px;
       z-index: 10;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
     }
-    
+
     header h1 {
       margin: 0;
       font-size: 24px;
     }
-    
+
     header a {
       display: block;
       margin-top: 5px;
@@ -39,36 +31,32 @@
       color: #555;
       text-decoration: none;
     }
-    
-    /* Main scrollable content */
+
     #wrapper {
-      margin-top: 100px; /* leaves space for the fixed header */
-      padding: 20px;
-      flex: 1;
+      margin-top: 80px;
+      height: 80vh;
       overflow-y: auto;
-      box-sizing: border-box;
+      padding: 20px;
     }
-    
-    /* Notebook entries */
+
     .entry {
       border-top: 1px solid #eee;
       padding-top: 20px;
       margin-bottom: 40px;
     }
-    
+
     .entry h2 {
       margin: 0 0 10px;
       font-size: 16px;
       color: #888;
     }
-    
+
     .entry p {
       font-size: 18px;
       line-height: 1.6;
       white-space: pre-wrap;
     }
     
-    /* Contact box styling */
     .contact-box {
       background-color: #fef5f6;
       border: 2px solid #f8c6ce;
