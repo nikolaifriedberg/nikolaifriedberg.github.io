@@ -73,12 +73,16 @@
   <script>
     const wrapper = document.getElementById("wrapper");
     const content = document.getElementById("content");
-
+    
     let allNotes = [...(window.NOTES || [])];
     let pool = [];
-
+    
     const CHUNK_SIZE = 7;
-
+    const INITIAL_LOAD_COUNT = 50;
+    const CONTACT_INSERT_INDEX = Math.floor(INITIAL_LOAD_COUNT / 2);
+    let entriesLoaded = 0;
+    let contactInserted = false;
+    
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -86,44 +90,49 @@
       }
       return array;
     }
-
+    
     function refillPool() {
       pool = shuffle(allNotes.slice());
     }
-
-    function loadMoreEntries() {
-      if (pool.length === 0) {
-        refillPool();
-      }
-
-      for (let i = 0; i < CHUNK_SIZE && pool.length > 0; i++) {
+    
+    function createEntryHTML(date, text) {
+      const div = document.createElement("div");
+      div.className = "entry";
+      div.innerHTML = `<h2>${date}</h2><p>${text}</p>`;
+      return div;
+    }
+    
+    function loadMoreEntries(count = CHUNK_SIZE) {
+      if (pool.length === 0) refillPool();
+    
+      for (let i = 0; i < count && pool.length > 0; i++) {
+        if (!contactInserted && entriesLoaded === CONTACT_INSERT_INDEX) {
+          const contact = createEntryHTML(
+            "CONTACT INFORMATION",
+            "You can email me at: nikolaifriedberg@gmail.com<br><br>Or find me on Instagram: @nimjolai"
+          );
+          content.appendChild(contact);
+          contactInserted = true;
+        }
+    
         const entry = pool.pop();
-        const div = document.createElement("div");
-        div.className = "entry";
-        div.innerHTML = `<h2>${entry.date}</h2><p>${entry.text}</p>`;
-        content.appendChild(div);
+        const entryDiv = createEntryHTML(entry.date, entry.text);
+        content.appendChild(entryDiv);
+        entriesLoaded++;
       }
     }
-
+    
     function handleScroll() {
       if (wrapper.scrollTop + wrapper.offsetHeight + 100 > content.offsetHeight) {
         loadMoreEntries();
       }
     }
-
+    
     wrapper.addEventListener("scroll", handleScroll);
-
-    // initial load
-    for (let i = 0; i < 10; i++) {
-      refillPool();
-      loadMoreEntries();
-      if (i == 5) {
-        const div = document.createElement("div");
-        div.className = "entry";
-        div.innerHTML = `<h2>${"CONTACT INFORMATION"}</h2><p>${"You can email me at: nikolaifriedberg@gmail.com\n\nOr find me on Instagram: @nimjolai"}</p>`;
-        content.appendChild(div);
-      }
-    }
+    
+    // Initial large load
+    refillPool();
+    loadMoreEntries(INITIAL_LOAD_COUNT);
   </script>
 </body>
 </html>
