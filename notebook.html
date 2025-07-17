@@ -56,6 +56,22 @@
       line-height: 1.6;
       white-space: pre-wrap;
     }
+    
+    .contact-box {
+      background-color: #fef5f6;
+      border: 2px solid #f8c6ce;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .contact-box h2 {
+      color: #b75b6b;
+    }
+    
+    .contact-box p {
+      color: #444;
+    }
   </style>
 </head>
 <body>
@@ -111,6 +127,7 @@
             "CONTACT INFORMATION",
             "You can email me at: nikolaifriedberg@gmail.com<br><br>Or find me on Instagram: @nimjolai"
           );
+          contact.classList.add("contact-box");
           content.appendChild(contact);
           contactInserted = true;
         }
