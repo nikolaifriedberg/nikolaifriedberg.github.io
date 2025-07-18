@@ -124,7 +124,10 @@
     function loadMoreEntries(count = CHUNK_SIZE) {
       if (pool.length === 0) refillPool();
     
-      for (let i = 0; i < count && pool.length > 0; i++) {
+      let loaded = 0;
+      let shouldScrollToContact = false;
+    
+      while (loaded < count && pool.length > 0) {
         if (!contactInserted && entriesLoaded === CONTACT_INSERT_INDEX) {
           const contact = createEntryHTML(
             "CONTACT INFORMATION",
@@ -134,12 +137,9 @@
           contact.classList.add("contact-box");
           content.appendChild(contact);
           contactInserted = true;
-
+    
           if (location.hash === "#contact") {
-            setTimeout(() => {
-              const el = document.getElementById("contact");
-              if (el) el.scrollIntoView({ behavior: "insant", block: "start" });
-            }, 200); 
+            shouldScrollToContact = true;
           }
         }
     
@@ -147,6 +147,15 @@
         const entryDiv = createEntryHTML(entry.date, entry.text);
         content.appendChild(entryDiv);
         entriesLoaded++;
+        loaded++;
+      }
+    
+      // Now that all entries are loaded, scroll to contact if requested
+      if (shouldScrollToContact) {
+        setTimeout(() => {
+          const el = document.getElementById("contact");
+          if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100); // Delay to allow DOM rendering
       }
     }
     
