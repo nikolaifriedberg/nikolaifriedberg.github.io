@@ -27,5 +27,18 @@ window.NOTES = [
     date: "Day of Lost Causes",
     text: "A string of recent events has led us to believe that causation has been misplaced. One of the higher ups put it down and couldn't remember where, and once that happened, despite multiple search parties and wanted posters, it all went bottom up."
   },
+  {
+    date: "Gabriel Garcia Marquez, Love in the Time of Cholera",
+    text: "One night she came back from her daily walk stunned by the revelation that one could be happy not only without love, but despite it."
+  },
+  {
+    date: "Infinite Jest, 42",
+    text: "Don't cry, Booboo. Remember the flag only halfway up the pole? Booboo, there are two ways to lower  aflag to half-mast. Are you listening? Because no shit I really have to sleep here in a second. So listen - one way to lower the flag to half-mast is to just lower the flag. There's another way though. You can also just raise the pole. YOu can raise the pole to like twice its original height. You get me? You understand what I mean, Mario?"
+  },
+  {
+    date: "Herman Melville, Moby Dick",
+    text: "The sea had jeeringly kept his finite body up, but drowned the infinite of his soul. Not drowned entirely, though. Rather carried down alive to wondrous depths, where strange shapes of the unwarped primal world glided to and fro before his passive eyes; and the miser-merman, Wisdom, revealed his hoarded heaps; and among the joyous, heartless, ever-juvenile eternities, Pip saw the multitudinous, God-omnipresent, coral insects, that out of the firmament of waters heaved the colossal orbs. He saw God’s foot upon the treadle of the loom, and spoke it; and therefore his shipmates called him mad. So man’s insanity is heaven’s sense; and wandering from all mortal reason, man comes at last to that celestial thought, which, to reason, is absurd and frantic; and weal or woe, feels then uncompromised, indifferent as his God."
+  },
 ];
+
       
