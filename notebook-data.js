@@ -33,7 +33,7 @@ window.NOTES = [
   },
   {
     date: "Infinite Jest, 42",
-    text: "Don't cry, Booboo. Remember the flag only halfway up the pole? Booboo, there are two ways to lower  aflag to half-mast. Are you listening? Because no shit I really have to sleep here in a second. So listen - one way to lower the flag to half-mast is to just lower the flag. There's another way though. You can also just raise the pole. YOu can raise the pole to like twice its original height. You get me? You understand what I mean, Mario?"
+    text: "Don't cry, Booboo. Remember the flag only halfway up the pole? Booboo, there are two ways to lower  aflag to half-mast. Are you listening? Because no shit I really have to sleep here in a second. So listen - one way to lower the flag to half-mast is to just lower the flag. There's another way though. You can also just raise the pole. You can raise the pole to like twice its original height. You get me? You understand what I mean, Mario?"
   },
   {
     date: "Herman Melville, Moby Dick",
