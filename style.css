@@ -20,6 +20,19 @@ header {
 
 .header-left h1 {
   margin: 0;
+  font-size: 24px
+}
+
+.header-left a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.header-right h1 {
+  margin: 0;
+  font-size: 24px
 }
 
 .header-right a {
@@ -27,11 +40,6 @@ header {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 24px;
 }
 
 header a {
