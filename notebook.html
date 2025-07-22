@@ -43,7 +43,7 @@
     }
 
     .entry {
-      border-top: 2px solid #000;
+      border-top: 0px solid #000;
       padding-top: 20px;
       margin: 0 auto 40px auto;
       max-width: 500px;
@@ -63,15 +63,15 @@
     }
     
     .contact-box {
-      background-color: #d2acd8;
-      border: 2px solid #f8c6ce;
+      background-color: #afc4a9;
+      border: 2px solid #000000;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
     
     .contact-box h2 {
-      color: #b75b6b;
+      color: #000000;
     }
     
     .contact-box p {
@@ -133,8 +133,8 @@
       while (loaded < count && pool.length > 0) {
         if (!contactInserted && entriesLoaded === CONTACT_INSERT_INDEX) {
           const contact = createEntryHTML(
-            "CONTACT INFORMATION",
-            "You can email me at: nikolaifriedberg@gmail.com<br><br>Or find me on Instagram: @nimjolai",
+            "Contact Information<br>..................................",
+            "Please email me at nikolaifriedberg@gmail.com<br><br>Or find me on Instagram: @nimjolai",
             "contact"
           );
           contact.classList.add("contact-box");
