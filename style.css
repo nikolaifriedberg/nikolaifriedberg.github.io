@@ -74,6 +74,23 @@ header a {
   object-fit: cover;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 40px 40px 40px;
+}
+
+.contact-text {
+  max-width: 50%;
+}
+
+.contact-image img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
 /* Modal styles */
 .modal {
   display: none;
