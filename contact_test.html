@@ -65,8 +65,8 @@
 
   <script>
     const imageFilenames = [
-      'birds/Ajman.jpg', 'birds/Albania.jpg', 'birds/Bechuanaland.jpg', 'birds/British-Honduras.jpg', 'birds/Chad.jpg',
-      'birds/Comoro.jpg', 'birds/Egypt.jpg', 'birds/Fernando.jpg', 'Birds/Gibralter.jpg', 'birds/Hungary.jpg'
+      'Ajman.jpg', 'Albania.jpg', 'Bechuanaland.jpg', 'British-Honduras.jpg', 'Chad.jpg',
+      'Comoro.jpg', 'Egypt.jpg', 'Fernando.jpg', 'Gibralter.jpg', 'birds/Hungary.jpg'
     ];
 
     const placedRects = [
@@ -92,7 +92,7 @@
       const img = new Image();
       const scale = 0.8 + Math.random() * 0.4;
 
-      img.src = `images/${filename}`;
+      img.src = `birds/${filename}`;
       img.className = 'stamp-img';
 
       img.onload = () => {
