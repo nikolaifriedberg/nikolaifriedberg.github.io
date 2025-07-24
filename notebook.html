@@ -77,20 +77,21 @@
     .contact-box p {
       color: #444;
 
-    .fixed-image {
+    .floating-image {
       position: fixed;
-      top: 120px; /* below the header */
-      right: 30px;
-      width: 200px;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%);
+      width: 220px; /* adjust size as needed */
       height: auto;
-      z-index: 5;
+      z-index: 1;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      pointer-events: none; /* makes it non-clickable if overlapping anything */
+      pointer-events: none; /* lets you click through it if needed */
     }
-      
-    }
-  </style>
+          
+        }
+      </style>
 </head>
 <body>
   <header>
