@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Serif;
-      background: #eee7d7;
+      background: #FFFFFF;
       overflow: auto
     }
 
@@ -79,13 +79,14 @@
 
     .fixed-image {
       position: fixed;
-      top: 100px; /* adjust as needed */
-      right: 20px;
-      width: 200px;  /* adjust size as needed */
+      top: 120px; /* below the header */
+      right: 30px;
+      width: 200px;
       height: auto;
       z-index: 5;
-      border-radius: 8px;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      pointer-events: none; /* makes it non-clickable if overlapping anything */
     }
       
     }
