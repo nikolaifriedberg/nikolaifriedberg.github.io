@@ -31,8 +31,10 @@
     /* Contact Box Styles */
     .contact-box {
       position: absolute;
-      top: 40px;
-      left: 40px;
+      top: auto;
+      left: auto;
+      bottom: 60px;
+      right: 60px;
       background-color: #afc4a9;
       border: 2px solid #000000;
       padding: 20px;
@@ -71,7 +73,7 @@
 
     const placedRects = [
       // Reserve space for contact box so stamps don't overlap it
-      { top: 40, left: 40, width: 250, height: 150 }
+      { top: 60, left: 60, width: 250, height: 150 }
     ];
 
     const container = document.getElementById('container');
@@ -113,7 +115,6 @@
             img.style.left = `${left}px`;
             img.style.width = `${width}px`;
             img.style.height = `${height}px`;
-            img.style.transform = `rotate(${Math.random() * 12 - 6}deg)`;
             container.appendChild(img);
           }
 
