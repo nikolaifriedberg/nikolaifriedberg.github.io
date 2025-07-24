@@ -13,7 +13,7 @@ window.NOTES = [
   },
   {
     date: "September 11",
-    text: "BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM"
+    text: "boom"
   },
   {
     date: "August 1st",
