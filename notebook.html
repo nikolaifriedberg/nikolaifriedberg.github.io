@@ -145,7 +145,7 @@
       let shouldScrollToContact = false;
     
       while (loaded < count && pool.length > 0) {
-        if (!contactInserted && entriesLoaded === CONTACT_INSERT_INDEX) {
+        if (!contactInserted && entriesLoaded === CONTACT_INSERT_INDEX && location.hash === "#contact") {
           const contact = createEntryHTML(
             "Contact Information<br>..................................",
             "Please email me at nikolaifriedberg@gmail.com<br><br>Or find me on Instagram: @nimjolai",
