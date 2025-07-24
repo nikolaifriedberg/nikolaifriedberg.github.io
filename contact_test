@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scattered Stamps with Contact Box</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fdfdfd;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .stamp-img {
+      position: absolute;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease;
+    }
+
+    .stamp-img:hover {
+      transform: scale(1.1) rotate(2deg);
+      z-index: 10;
+    }
+
+    /* Contact Box Styles */
+    .contact-box {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      background-color: #afc4a9;
+      border: 2px solid #000000;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      max-width: 250px;
+      z-index: 20; /* stays above stamps */
+    }
+
+    .contact-box h2 {
+      margin-top: 0;
+      color: #000000;
+    }
+
+    .contact-box p {
+      color: #444;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Contact Box -->
+    <div class="contact-box">
+      <h2>Contact Me</h2>
+      <p>email@example.com</p>
+      <p>+1 234 567 8901</p>
+    </div>
+  </div>
+
+  <script>
+    const imageFilenames = [
+      'stamp1.jpg', 'stamp2.jpg', 'stamp3.jpg', 'stamp4.jpg', 'stamp5.jpg',
+      'stamp6.jpg', 'stamp7.jpg', 'stamp8.jpg', 'stamp9.jpg', 'stamp10.jpg'
+    ];
+
+    const placedRects = [
+      // Reserve space for contact box so stamps don't overlap it
+      { top: 40, left: 40, width: 250, height: 150 }
+    ];
+
+    const container = document.getElementById('container');
+    const containerWidth = window.innerWidth;
+    const containerHeight = window.innerHeight;
+    const maxTries = 100;
+
+    function isOverlapping(newRect) {
+      return placedRects.some(rect =>
+        !(newRect.left + newRect.width < rect.left ||
+          newRect.left > rect.left + rect.width ||
+          newRect.top + newRect.height < rect.top ||
+          newRect.top > rect.top + rect.height)
+      );
+    }
+
+    function placeImage(filename) {
+      const img = new Image();
+      const scale = 0.8 + Math.random() * 0.4;
+
+      img.src = `images/${filename}`;
+      img.className = 'stamp-img';
+
+      img.onload = () => {
+        const width = img.naturalWidth * scale;
+        const height = img.naturalHeight * scale;
+
+        let tries = 0, top, left, rect, found = false;
+
+        while (tries < maxTries && !found) {
+          top = Math.random() * (containerHeight - height);
+          left = Math.random() * (containerWidth - width);
+          rect = { top, left, width, height };
+
+          if (!isOverlapping(rect)) {
+            found = true;
+            placedRects.push(rect);
+            img.style.top = `${top}px`;
+            img.style.left = `${left}px`;
+            img.style.width = `${width}px`;
+            img.style.height = `${height}px`;
+            img.style.transform = `rotate(${Math.random() * 12 - 6}deg)`;
+            container.appendChild(img);
+          }
+
+          tries++;
+        }
+
+        if (!found) {
+          console.warn(`Could not place ${filename} without overlap.`);
+        }
+      };
+    }
+
+    imageFilenames.forEach(placeImage);
+  </script>
+</body>
+</html>
