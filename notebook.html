@@ -76,6 +76,18 @@
     
     .contact-box p {
       color: #444;
+
+    .fixed-image {
+      position: fixed;
+      top: 100px; /* adjust as needed */
+      right: 20px;
+      width: 200px;  /* adjust size as needed */
+      height: auto;
+      z-index: 5;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+      
     }
   </style>
 </head>
@@ -85,7 +97,9 @@
     <a href="index.html">Back to home</a>
     <a href="contact.html">Contact</a>
   </header>
-
+  
+  <img src="images/sleeping beauty.png" alt="Right Side Image" class="fixed-image" />
+  
   <div id="wrapper">
     <div id="content"></div>
   </div>
