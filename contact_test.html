@@ -139,6 +139,10 @@
         while (tries < maxTries && !found) {
           top = Math.random() * (containerHeight - height);
           left = Math.random() * (containerWidth - width);
+          if (tries % 10 == 0) {
+            width = width * 0.9;
+            height = width * 0.9;
+          }
           rect = { top, left, width, height };
 
           if (!isOverlapping(rect)) {
