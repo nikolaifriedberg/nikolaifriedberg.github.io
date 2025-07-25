@@ -39,6 +39,9 @@ window.NOTES = [
     date: "Herman Melville, Moby Dick",
     text: "The sea had jeeringly kept his finite body up, but drowned the infinite of his soul. Not drowned entirely, though. Rather carried down alive to wondrous depths, where strange shapes of the unwarped primal world glided to and fro before his passive eyes; and the miser-merman, Wisdom, revealed his hoarded heaps; and among the joyous, heartless, ever-juvenile eternities, Pip saw the multitudinous, God-omnipresent, coral insects, that out of the firmament of waters heaved the colossal orbs. He saw God’s foot upon the treadle of the loom, and spoke it; and therefore his shipmates called him mad. So man’s insanity is heaven’s sense; and wandering from all mortal reason, man comes at last to that celestial thought, which, to reason, is absurd and frantic; and weal or woe, feels then uncompromised, indifferent as his God."
   },
+  {
+    date: "July 24th",
+    text: "Twinkle twinkle little star. When I was a child, my parents would sing to me 'Twinkle Twinkle little Nikolai, like a diamond in the sky' - and I was embarrassed and giddy on my parents love, overjoyed to have a song written about me (I really did think they wrote it). I sometimes wonder why I like music so much. I know my dad danced a lot around me when I was a kid, so I danced a lot too. I still do. I wonder if you squinted, if it would look like I was twinkling still."
 ];
 
       
