@@ -131,8 +131,8 @@
       img.className = 'stamp-img';
 
       img.onload = () => {
-        const width = img.naturalWidth * scale;
-        const height = img.naturalHeight * scale;
+        let width = img.naturalWidth * scale;
+        let height = img.naturalHeight * scale;
 
         let tries = 0, top, left, rect, found = false;
 
@@ -140,8 +140,8 @@
           top = Math.random() * (containerHeight - height);
           left = Math.random() * (containerWidth - width);
           if (tries % 10 == 0) {
-            width = width * 0.85;
-            height = width * 0.85;
+            width *= 0.85;
+            height *= 0.85;
           }
           rect = { top, left, width, height };
 
