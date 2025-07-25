@@ -77,11 +77,36 @@
       'Comoro.jpg', 'Egypt.jpg', 'Fernando.jpg', 'Gibralter.jpg', 'Hungary.jpg', 'Kenya.jpg', 'Laos.jpg', 'Rhodesia.jpg', 'Togo.jpg', 'USA.jpg'
     ];
 
-    const placedRects = [
-      // Reserve space for contact box so stamps don't overlap it
-      { top: 200, left: 50%, width: 200, height: 150 }
-      { top: 40, left: 40, width: 80, height: 80 }
-    ];
+    const placedRects = [];
+    
+    // Reserve space for contact box and header
+    window.addEventListener("load", () => {
+      const contactBox = document.querySelector(".contact-box");
+      const header = document.querySelector("header");
+    
+      if (contactBox) {
+        const rect = contactBox.getBoundingClientRect();
+        placedRects.push({
+          top: rect.top,
+          left: rect.left,
+          width: rect.width,
+          height: rect.height
+        });
+      }
+    
+      if (header) {
+        const rect = header.getBoundingClientRect();
+        placedRects.push({
+          top: rect.top,
+          left: rect.left,
+          width: rect.width,
+          height: rect.height
+        });
+      }
+    
+      // Now place images
+      imageFilenames.forEach(placeImage);
+    });
 
     const container = document.getElementById('container');
     const containerWidth = window.innerWidth;
@@ -133,8 +158,6 @@
         }
       };
     }
-
-    imageFilenames.forEach(placeImage);
   </script>
 </body>
 </html>
