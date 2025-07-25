@@ -78,17 +78,29 @@
       color: #444;
     }
     
-    .floating-image {
+    .floating-image-right {
       position: fixed;
       top: 5%;
       right: 120px;
+      float: right;
+      transform: translateY(-50%);
+      height: auto;
+      z-index: 1;
+      pointer-events: none; /* lets you click through it if needed */
+    }
+
+    .floating-image-left {
+      position: fixed;
+      top: 5%;
+      left: 120px;
+      float: left;
       transform: translateY(-50%);
       height: auto;
       z-index: 1;
       pointer-events: none; /* lets you click through it if needed */
     }
               
-      </style>
+    </style>
 </head>
 <body>
   <header>
@@ -97,8 +109,8 @@
     <a href="contact_test.html">Contact</a>
   </header>
   
-  <img src="images/sleeping beauty.png" alt="Sleeping Beauty" class="floating-image" float: right />
-  <img src="images/rainbird.jpg" alt="The Bird that Makes the Rain" class="floating-image"float: left />
+  <img src="images/sleeping beauty.png" alt="Sleeping Beauty" class="floating-image-right" />
+  <img src="images/rainbird.jpg" alt="The Bird that Makes the Rain" class="floating-image-left" />
   
   <div id="wrapper">
     <div id="content"></div>
