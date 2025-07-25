@@ -41,7 +41,7 @@ window.NOTES = [
   },
   {
     date: "July 24th",
-    text: "Twinkle twinkle little star. When I was a child, my parents would sing to me 'Twinkle Twinkle little Nikolai, like a diamond in the sky' - and I was embarrassed and giddy on my parents love, overjoyed to have a song written about me (I really did think they wrote it). I sometimes wonder why I like music so much. I know my dad danced a lot around me when I was a kid, so I danced a lot too. I still do. I wonder if you squinted, if it would look like I was twinkling still."
+    text: "Twinkle twinkle little star. When I was a child, my parents would sing to me 'Twinkle Twinkle little Nikolai, like a diamond in the sky' - and I was embarrassed and giddy on my parents love, overjoyed to have a song written about me (I really did think they wrote it). I sometimes wonder why I like music so much. I know my dad danced a lot around me when I was a kid, so I danced a lot too. I dancced today. I wonder if you squinted, if it would have looked like I was twinkling still."
   },
 ];
 
