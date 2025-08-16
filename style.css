@@ -23,7 +23,7 @@ header h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 300px;
+  margin-left: 0px;
 }
 
 header a {
