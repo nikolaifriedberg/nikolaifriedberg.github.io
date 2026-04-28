@@ -77,28 +77,33 @@
 
     /* ✅ FIXED SIDE IMAGES */
 
-    .floating-image-left,
-    .floating-image-right {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      height: auto;
-      max-height: 80vh;
-      width: auto;
-      z-index: 1;
-      pointer-events: none;
-      opacity: 0.9;
-    }
+.floating-image-left,
+.floating-image-right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
 
-    /* Keep images OUTSIDE the 600px content column */
-    .floating-image-left {
-      left: max(20px, calc((100vw - 600px) / 2 - 420px));
-    }
+  /* 🔑 THIS is the important fix */
+  max-width: calc((100vw - 600px) / 2 - 40px);
 
-    .floating-image-right {
-      right: max(20px, calc((100vw - 600px) / 2 - 420px));
-      transform: translateY(-40%); /* slight upward bias → crops bottom first */
-    }
+  max-height: 80vh;
+  width: auto;
+
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Positioning stays simple */
+.floating-image-left {
+  left: 20px;
+}
+
+.floating-image-right {
+  right: 20px;
+  transform: translateY(-40%); /* keep your bottom-crop preference */
+}
 
     /* Hide on smaller screens */
     @media (max-width: 900px) {
