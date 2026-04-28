@@ -6,19 +6,20 @@
   <title>Notebook</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+  header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+    
     body {
       margin: 0;
       font-family: Serif;
       background: #FFFFFF;
-      overflow: auto
-    }
-
-    header {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      bottom: 20px;
-      z-index: 10;
+    
+      display: grid;
+      grid-template-columns: 1fr minmax(0, 600px) 1fr;
     }
 
     header h1 {
@@ -35,13 +36,13 @@
     }
     
     #wrapper {
+      grid-column: 2;
       margin-top: 100px;
       height: 80vh;
       overflow-y: auto;
       padding: 20px 20px 0px 20px;
-      align-items: center;
     }
-
+    
     .entry {
       border-top: 0px solid #000;
       padding-top: 20px;
@@ -78,35 +79,44 @@
       color: #444;
     }
     
-    .floating-image-right {
-      position: fixed;
-      top: 5%;
-      right: 160px;
-      float: right;
-      transform: translateY(0%);
-      height: auto;
-      z-index: 1;
-      pointer-events: none; /* lets you click through it if needed */
-    }
-
     .floating-image-left {
-      position: fixed;
-      top: 15%;
-      left: 2%;
-      float: left;
-      transform: translateY(20%);
+      grid-column: 1;
+      align-self: start;
+      justify-self: center;
+      position: sticky;
+      top: 10vh;
+    
+      width: clamp(150px, 70%, 400px);
       height: auto;
-      width: 450px;
-      z-index: 1;
-      pointer-events: none; /* lets you click through it if needed */
     }
+    
+    .floating-image-right {
+      grid-column: 3;
+      align-self: start;
+      justify-self: center;
+      position: sticky;
+      top: 10vh;
+    
+      width: clamp(150px, 70%, 400px);
+      height: auto;
+    }
+    
+    @media (max-width: 900px) {
+    body {
+      grid-template-columns: 1fr;
+    }
+  
+    #wrapper {
+      grid-column: 1;
+    }
+  
+    .floating-image-left,
+    .floating-image-right {
+      display: none;
+    }
+}
 
-    @media (max-width: 768px) {
-      .floating-image-left,
-      .floating-image-right {
-        display: none;
-      }
-    }
+    
               
     </style>
 </head>
